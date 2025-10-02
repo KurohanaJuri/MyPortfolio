@@ -4,40 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/MyPortfolio/assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <div class="grid">
+    <div class="container">
         <aside class="sidebar">
-            <h2 class="header">Profile</h2>            
+            <div class="header-container">
+                <h2 class="header">Profile</h2>            
 <div class="profile">
     
     <div class="title">Chau Ying Kot</div>
     <div class="subtitle">Junior Software Developer</div>
-    <div class="subtitle">MSc Computer Science Graduate @ EPFL</div>
-    <div class="text">Profile</div>
+    <div class="subtitle">MSc in Computer Science, EPFL</div>
 </div>
-
-            <h2 class="header">Quick Links</h2>            
-
-            <div class="spacer"></div>
-            
+                <button class="menuBtn" id="menuBtn"><i class="bi bi-list"></i></button>
+            </div>
+            <div class="links-container" id="navLinks">
+                <h2 class="header">Quick Links</h2>
+                    
   <div class="sidebar-link">
     <a href="/MyPortfolio/"><i class="bi bi-house"></i>  Home</a>
 </div>
 
-            
+                    
   <div class="sidebar-link">
     <a href="/MyPortfolio/about"><i class="bi bi-person"></i>  About me</a>
 </div>
 
-            
+                    
   <div class="sidebar-link">
     <a href="https://www.linkedin.com/in/chau-ying-kot/"><i class="bi bi-linkedin"></i>  LinkedIn</a>
 </div>
 
+            </div>
         </aside>
         <main class="content">
             
@@ -45,9 +47,14 @@
     <h1>Personal Projects</h1>
     <div class="cards">    
         
-        <a href="/MyPortfolio/posts/personal/test/" class="card">
-            <h2>First Project</h2>
-            <p class="summary">A cool project built with Eleventy</p>
+        <a href="/MyPortfolio/posts/personal/01_portfolio_website/" class="card">
+            <h2>Portfolio</h2>
+            <p class="summary">A portfolio to share my works</p>
+        </a>
+        
+        <a href="/MyPortfolio/posts/personal/02_chmolChef/" class="card">
+            <h2>ChmolChef</h2>
+            <p class="summary">ChmolChef is a playful digital cookbook that helps plan meals, get recipe inspiration, and generate shopping lists.</p>
         </a>
         
     </div>
@@ -57,16 +64,21 @@
     <h1>Academic Projects</h1>
     <div class="cards">    
         
-        <a href="/MyPortfolio/posts/academic/test/" class="card">
-            <h2>First Project</h2>
-            <p class="summary">A cool project built with Eleventy</p>
-        </a>
-        
     </div>
 </div>
 
         </main>
     </div>
+
+    <script type="text/javascript">
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            console.log("Clicked");
+        });
+    </script>
 </body>
 
 </html>

@@ -4,51 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/MyPortfolio/assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <div class="grid">
+    <div class="container">
         <aside class="sidebar">
-            <h2 class="header">Profile</h2>            
+            <div class="header-container">
+                <h2 class="header">Profile</h2>            
 <div class="profile">
     
     <div class="title">Chau Ying Kot</div>
     <div class="subtitle">Junior Software Developer</div>
-    <div class="subtitle">MSc Computer Science Graduate @ EPFL</div>
-    <div class="text">Profile</div>
+    <div class="subtitle">MSc in Computer Science, EPFL</div>
 </div>
-
-            <h2 class="header">Quick Links</h2>            
-
-            <div class="spacer"></div>
-            
+                <button class="menuBtn" id="menuBtn"><i class="bi bi-list"></i></button>
+            </div>
+            <div class="links-container" id="navLinks">
+                <h2 class="header">Quick Links</h2>
+                    
   <div class="sidebar-link">
     <a href="/MyPortfolio/"><i class="bi bi-house"></i>  Home</a>
 </div>
 
-            
+                    
   <div class="sidebar-link">
     <a href="/MyPortfolio/about"><i class="bi bi-person"></i>  About me</a>
 </div>
 
-            
+                    
   <div class="sidebar-link">
     <a href="https://www.linkedin.com/in/chau-ying-kot/"><i class="bi bi-linkedin"></i>  LinkedIn</a>
 </div>
 
+            </div>
         </aside>
         <main class="content">
             
-<h1>About Me</h1>
+<section class="about-section">
+    <h1>About Me</h1>
 
-<div class="text">
-    <p>About me</p>
+    <div class="text">
+        <p>I’m a developer with a Master’s in Computer Science from EPFL. I love turning ideas and data into projects that actually make a difference. I’ve worked on everything from machine learning and computer vision to large language models and software development. I enjoy anything that lets me experiment and solve real problems.</p>
+<p>This portfolio isn’t just a collection of projects, it’s a look into the problems I’ve tackled and how I approached them. I care as much about the process as the final product: experimenting, learning, and turning ideas into working programs. Every project, big or small, has the potential to make an impact, and that’s what keeps me curious and motivated.</p>
+<p>When I’m not coding, you can usually find me behind a camera, experimenting with recipes, or working on a crocheting project. These hobbies teach me to notice details, experiment, and create from scratch. They keep me curious and inspire me to approach problems in my work with creativity and fresh perspectives.</p>
 
-</div>
+    </div>
+</section>
         </main>
     </div>
+
+    <script type="text/javascript">
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            console.log("Clicked");
+        });
+    </script>
 </body>
 
 </html>

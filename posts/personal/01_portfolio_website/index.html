@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/MyPortfolio/assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="header-container">
+                <h2 class="header">Profile</h2>            
+<div class="profile">
+    
+    <div class="title">Chau Ying Kot</div>
+    <div class="subtitle">Junior Software Developer</div>
+    <div class="subtitle">MSc in Computer Science, EPFL</div>
+</div>
+                <button class="menuBtn" id="menuBtn"><i class="bi bi-list"></i></button>
+            </div>
+            <div class="links-container" id="navLinks">
+                <h2 class="header">Quick Links</h2>
+                    
+  <div class="sidebar-link">
+    <a href="/MyPortfolio/"><i class="bi bi-house"></i>  Home</a>
+</div>
+
+                    
+  <div class="sidebar-link">
+    <a href="/MyPortfolio/about"><i class="bi bi-person"></i>  About me</a>
+</div>
+
+                    
+  <div class="sidebar-link">
+    <a href="https://www.linkedin.com/in/chau-ying-kot/"><i class="bi bi-linkedin"></i>  LinkedIn</a>
+</div>
+
+            </div>
+        </aside>
+        <main class="content">
+            <section>
+  <h1>Portfolio</h1>
+  <div class="tag-container">
+    
+      
+  <div class="tag-chip">Web</div>
+
+    
+  </div>
+  
+    <div class="repo-link">
+      <i class="bi bi-github"> <a href=https://github.com/KurohanaJuri/MyPortfolio>Link to Repo</a></i>
+    </div>
+  
+  <div class="text">
+    <h2>Building My Portfolio: More Than Just a Showcase</h2>
+<p>When I set out to build this portfolio, I knew I didn’t just want a space to list projects. I wanted it to reflect how I think, the problems I’ve faced, and the journey behind each solution. For me, coding has always been more than writing lines of code, it’s about curiosity, creativity, and finding new ways to make an impact.</p>
+<p>Here, you’ll find a mix of projects: from machine learning and computer vision to large language models and software development. Each one represents a challenge I’ve tackled, the approach I took, and the lessons I learned along the way.</p>
+<p>I believe every project, no matter how small, can make a difference. That’s why this portfolio is structured not only to show the end results but also to highlight the process: the questions asked, the experiments run, and the ideas that eventually became something real. In that sense, this portfolio is a living story of my journey as a junior developer.</p>
+<p>Creating this website itself was not the easiest task. Back in my bachelor’s, I had built a few websites, but that was a long time ago, and I had to refresh many of those skills. Surprisingly, even with a background in art during my college years, I found it difficult to settle on a color scheme. Balancing pleasant tones with good contrast turned out to be harder than I expected, even with the help of color scheme generators. It reminded me that design is a complex domain of its own, and one that deserves as much skill and practice as coding.</p>
+
+  </div>
+</section>
+
+        </main>
+    </div>
+
+    <script type="text/javascript">
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            console.log("Clicked");
+        });
+    </script>
+</body>
+
+</html>
