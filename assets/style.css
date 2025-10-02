@@ -23,6 +23,7 @@ h1 {
     border-bottom: 1px solid var(--tertiary-accent-color);
 }
 
+/* BASE LAYOUT */
 .container {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -128,6 +129,41 @@ h1 {
 
 .card:hover .summary {
     opacity: 1;
+}
+
+.content>section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid var(--secondary-accent-color);
+}
+
+.content .text {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.content h2 {
+    color: var(--tertiary-accent-color);
+}
+
+.tag-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.tag-chip {
+    border-radius: 8px;
+    background-color: var(--secondary-accent-color);
+    padding: 6px 12px;
+    width: fit-content;
+    color: var(--secondary-color);
 }
 
 @media (max-width: 600px) {

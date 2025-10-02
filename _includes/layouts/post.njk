@@ -1,9 +1,21 @@
 ---
 layout: base.njk
 ---
-<article>
+{%- from "../components/tag_chip/macro.njk" import tag_chip -%}
+
+<section>
   <h1>{{ title }}</h1>
-  <div>
+  <div class="tag-container">
+    {% for tag in tags %}
+      {{ tag_chip({ name: tag }) }}
+    {% endfor %}
+  </div>
+  {% if link is defined %}
+    <div class="repo-link">
+      <i class="bi bi-github"> <a href={{ link }}>Link to Repo</a></i>
+    </div>
+  {% endif %}
+  <div class="text">
     {{ content | safe }}
   </div>
-</article>
+</section>

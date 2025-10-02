@@ -4,11 +4,11 @@ module.exports = function (eleventyConfig) {
 
     // Define posts collection
     eleventyConfig.addCollection("personal_projects", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("posts/personal/*.md").reverse();
+        return collectionApi.getFilteredByGlob("posts/personal/*.md");
     });
 
     eleventyConfig.addCollection("academic_projects", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("posts/academic/*.md").reverse();
+        return collectionApi.getFilteredByGlob("posts/academic/*.md");
     });
 
     return {
