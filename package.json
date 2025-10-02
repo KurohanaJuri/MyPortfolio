@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=https://github.com/KurohanaJuri/MyPortfolio"
+    "build-ghpages": "env NODE_ENV=production npx eleventy --pathprefix 'MyPortfolio'",
+    "start": "npx eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
