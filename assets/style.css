@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #C1B5D6;
+    --secondary-color: #F8F8F7;
+    --secondary-accent-color: #B3A9B7;
+    --tertiary-color: #8C8CAE;
+    --tertiary-accent-color: #6C7EBE;
+    --text-color: #0e0413;
+    --backgound-color: #fcf9fe;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--tertiary-color);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--tertiary-accent-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 16px;
+}
+
+.sidebar .header {
+    margin-top: 0;
+    text-align: left;
+    border-bottom: 1px solid var(--tertiary-accent-color);
+    padding-bottom: 8px;
+    font-size: 20pt;
+}
+
+.sidebar .profile .title {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-top: 8px;
+    color: var(--tertiary-accent-color);
+}
+
+.sidebar .profile .subtitle {
+    font-size: 12pt;
+    margin-top: 4px;
+}
+
+.sidebar .profile .text {
+    font-size: 10pt;
+    margin: 8px 8px 0px 0px;
+    text-align: justify;
+}
+
+.sidebar>* {
+    padding: 16px;
+    margin: 0px;
+}
+
+.sidebar-link {
+    font-size: 14pt
+}
+
+.sidebar-link>a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.sidebar-link>a:hover {
+    color: var(--tertiary-accent-color);
+    transition: color 0.2s;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.section {
+    margin: 8px;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--tertiary-accent-color);
+    position: relative;
+    transition: transform 0.2s;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.card .summary {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .summary {
+    opacity: 1;
+}

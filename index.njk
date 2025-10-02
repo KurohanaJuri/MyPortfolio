@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: Home
+---
+
+<div class="section">
+    <h1>Personal Projects</h1>
+    <div class="cards">    
+        {% for post in collections.personal_projects %}
+        <a href="{{ post.url }}" class="card">
+            <h2>{{ post.data.title }}</h2>
+            <p class="summary">{{ post.data.summary }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section">
+    <h1>Academic Projects</h1>
+    <div class="cards">    
+        {% for post in collections.academic_projects %}
+        <a href="{{ post.url }}" class="card">
+            <h2>{{ post.data.title }}</h2>
+            <p class="summary">{{ post.data.summary }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</div>
