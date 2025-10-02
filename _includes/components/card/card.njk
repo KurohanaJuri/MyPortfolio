@@ -1,0 +1,13 @@
+{% from "../tag_chip/macro.njk" import tag_chip %}
+
+<a href="{{ post.url | url }}" class="card">
+    <h2>{{ post.data.title }}</h2>
+
+    <div class="tag-container">
+        {% for tag in post.data.tags %}
+            {{ tag_chip({ name: tag}) }}
+        {% endfor %}
+    </div>
+   
+    <p class="summary">{{ post.data.summary }}</p>
+</a>

@@ -2,15 +2,13 @@
 layout: base.njk
 title: Home
 ---
+{%- from "_includes/components/card/macro.njk" import card_component -%}
 
 <div class="section">
     <h1>Personal Projects</h1>
     <div class="cards">    
         {% for post in collections.personal_projects %}
-        <a href="{{ post.url | url }}" class="card">
-            <h2>{{ post.data.title }}</h2>
-            <p class="summary">{{ post.data.summary }}</p>
-        </a>
+            {{ card_component(post) }}
         {% endfor %}
     </div>
 </div>
@@ -19,10 +17,7 @@ title: Home
     <h1>Academic Projects</h1>
     <div class="cards">    
         {% for post in collections.academic_projects %}
-        <a href="{{ post.url | url }}" class="card">
-            <h2>{{ post.data.title }}</h2>
-            <p class="summary">{{ post.data.summary }}</p>
-        </a>
+            {{ card_component(post) }}
         {% endfor %}
     </div>
 </div>

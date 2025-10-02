@@ -105,26 +105,39 @@ h1 {
 }
 
 .card {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
     color: var(--tertiary-accent-color);
-    position: relative;
     transition: transform 0.2s;
-    aspect-ratio: 1/1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary-accent-color);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    background: var(--tertiary-color);
-    color: var(--secondary-color);
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--tertiary-accent-color);
 }
 
 .card .summary {
     opacity: 0;
     transition: opacity 0.3s;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: var(--tertiary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover>* {
+    color: var(--secondary-color);
 }
 
 .card:hover .summary {
@@ -159,10 +172,26 @@ h1 {
 }
 
 .tag-chip {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    font-size: 0.75rem;
+    font-weight: 400;
     border-radius: 8px;
     background-color: var(--secondary-accent-color);
-    padding: 6px 12px;
-    width: fit-content;
+    color: var(--secondary-color);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.tag-chip:hover {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.card .tag-container .tag-chip:hover {
+    transform: none;
+    background-color: var(--secondary-accent-color);
     color: var(--secondary-color);
 }
 
@@ -190,6 +219,11 @@ h1 {
 
     .sidebar .profile .text {
         display: none;
+    }
+
+    .card {
+        font-size: 1rem;
+        padding: 1rem;
     }
 
     .content {
@@ -227,5 +261,17 @@ h1 {
 
     .show#navLinks .sidebar-link {
         padding: 8px 0px;
+    }
+}
+
+@media (hover: none) {
+    .card .summary {
+        opacity: 1;
+    }
+
+    .card:hover {
+        transform: none;
+        background: var(--secondary-color);
+        color: var(--tertiary-accent-color);
     }
 }
