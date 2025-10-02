@@ -6,26 +6,39 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title or "My Portfolio" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/style.css' | url }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <div class="grid">
+    <div class="container">
         <aside class="sidebar">
-            {% include "components/profile.njk" %}
-
-            <h2 class="header">Quick Links</h2>            
-
-            <div class="spacer"></div>
-            {{ sidebar_link({ name: "Home", url:  '/' | url , icon: "bi bi-house"}) }}
-            {{ sidebar_link({ name: "About me", url: '/about' | url , icon: "bi bi-person"}) }}
-            {{ sidebar_link({ name: "LinkedIn", url: "https://www.linkedin.com/in/chau-ying-kot/", icon: "bi bi-linkedin"}) }}
+            <div class="header-container">
+                {% include "components/profile.njk" %}
+                <button class="menuBtn" id="menuBtn"><i class="bi bi-list"></i></button>
+            </div>
+            <div class="links-container" id="navLinks">
+                <h2 class="header">Quick Links</h2>
+                    {{ sidebar_link({ name: "Home", url:  '/' | url , icon: "bi bi-house"}) }}
+                    {{ sidebar_link({ name: "About me", url: '/about' | url , icon: "bi bi-person"}) }}
+                    {{ sidebar_link({ name: "LinkedIn", url: "https://www.linkedin.com/in/chau-ying-kot/", icon: "bi bi-linkedin"}) }}
+            </div>
         </aside>
         <main class="content">
             {{ content | safe }}
         </main>
     </div>
+
+    <script type="text/javascript">
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            console.log("Clicked");
+        });
+    </script>
 </body>
 
 </html>
